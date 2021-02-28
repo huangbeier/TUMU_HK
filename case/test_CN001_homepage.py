@@ -7,6 +7,7 @@ import time
 from selenium import webdriver
 from config import chromeDriver_Path,hk_kefu_url,hk_url,hk_cart,hk_account
 from utils.seleniumtools import new_find_element
+from CN_003_product_list_page import product_list
 
 class HOMEPAGE(unittest.TestCase):
     @classmethod
@@ -31,19 +32,19 @@ class HOMEPAGE(unittest.TestCase):
     def test_002_TUMIUAT_662_2(self):
         homepage1 = homepage(self.driver)
         homepage1.click_vip_club()
-        assert self.driver.current_url == f'{hk_url}tumi-club/'
-        assert new_find_element(self.driver,homepage.vip_Privilege).text == '会员专属礼遇'
+        assert self.driver.current_url == f'{hk_url}tumi-exclusives-club/'
+        assert new_find_element(self.driver,homepage.vip_Privilege).text == 'TUMI Exclusives Club Benefits'
 
     def test_003_TUMIUAT_662_3(self):
         homepage1 = homepage(self.driver)
-        homepage1.move_to_wechat()
-        # assert new_find_element(self.driver,assert_element.wechat_text).text == '扫一扫进入TUMI途明 微信精品店'
+        homepage1.click_lang_selector()
+        assert new_find_element(self.driver,product_list.f_luggage).text == '旅行箱'
 
     def test_004_TUMIUAT_662_4(self):
         homepage1 = homepage(self.driver)
         homepage1.click_offline_store()
         assert self.driver.current_url == f'{hk_url}store-locator/'
-        assert new_find_element(self.driver,homepage.store_type).text == '门店类型'
+        assert new_find_element(self.driver,homepage.store_type).text == 'Store Type'
 
     def test_005_TUMIUAT_662_5(self):
         homepage1 = homepage(self.driver)
@@ -59,7 +60,7 @@ class HOMEPAGE(unittest.TestCase):
         homepage1 = homepage(self.driver)
         homepage1.click_login()
         time.sleep(0.5)
-        assert new_find_element(self.driver,homepage.login_text).text == '登录您的TUMI.CN账号'
+        assert new_find_element(self.driver,homepage.login_text).text == 'Log in to your TUMI.HK account'
 
     def test_008_TUMIUAT_410(self):
         homepage1 = homepage(self.driver)

@@ -9,16 +9,16 @@ class homepage(page):
     logo=('xpath','//body/div[2]/section[1]/div[4]/div[1]/a[1]/img[1]')
     #会员俱乐部
     vip_club=('xpath','//header/div[3]/div[2]/a[1]')
-    #微信精品店
-    wechat=('xpath','//header/div[3]/div[2]/a[2]')
+    #切换语言
+    lang_selector=('id','lang-selector')
     #线下门店
-    offline_store=('xpath','//header/div[3]/div[2]/a[3]')
+    offline_store=('xpath','//header/div[3]/div[2]/a[2]')
     #在线客服
-    customer_service=('xpath','//header/div[3]/div[2]/a[4]')
+    customer_service=('xpath','//header/div[3]/div[2]/a[3]')
     #购物车
     cart=('id',"minicart_data")
     #登陆注册
-    login_register_btn=('link text','登录/注册')
+    login_register_btn=('link text','Login / Register')
     #手机号
     phone=('id','j_username')
     #密码
@@ -64,10 +64,10 @@ class homepage(page):
     #登出
     sign_out_btn=('link text','登出')
 
-    vip_Privilege=('xpath',"//strong[contains(text(),'会员专属礼遇')]")
+    vip_Privilege=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/h4[1]")
     wechat_text=('xpath','//header/div[3]/div[2]/a[2]/div[1]/div[2]/p[1]')
-    store_type=('xpath',"//div[contains(text(),'门店类型')]")
-    login_text=('xpath',"//span[contains(text(),'登录您的TUMI.CN账号')]")
+    store_type=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/div[3]")
+    login_text=('xpath',"/html[1]/body[1]/div[2]/div[2]/div[2]/div[1]/div[1]/header[1]/span[1]")
     no_search=('xpath',"//div[contains(text(),'对不起，没有搜索结果')]")
     have_search=('xpath',"//div[contains(text(),'搜索结果')]")
     luggage_title=('xpath',"//span[contains(text(),'各类旅行箱 - 托运旅行箱、登机箱')]")
@@ -109,6 +109,10 @@ class homepage(page):
     def sign_out(self):
         self.click(self.sign_out_btn)
 
+    def click_lang_selector(self):
+        self.click(self.lang_selector)
+        time.sleep(3)
+
     def login_no_phone(self):
         self.click(self.login_register_btn)
         time.sleep(1)
@@ -146,8 +150,6 @@ class homepage(page):
         self.click(self.vip_club)
         self.new_page()
 
-    def move_to_wechat(self):
-        self.action(self.wechat)
 
     def click_offline_store(self):
         self.click(self.offline_store)
