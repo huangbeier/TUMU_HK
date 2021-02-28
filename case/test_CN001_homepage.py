@@ -109,48 +109,48 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.click_f_recycled()
         assert new_find_element(self.driver,homepage.recycled_title).text =="Men's & Women's styles made from recycled materials"
 
-    # def test_016_TUMIUAT_417_1(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.roll_to_bottom_AD_space()
-    #     homepage1.click_bottom_AD_space_title()
-    #     homepage1.new_page()
-    #     assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/ '
-    #
-    # def test_017_TUMIUAT_417_2(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.roll_to_bottom_AD_space()
-    #     homepage1.click_bottom_AD_space_img()
-    #     homepage1.new_page()
-    #     assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
-    #
-    # def test_018_TUMIUAT_417_3(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.roll_to_bottom_AD_space()
-    #     homepage1.click_bottom_AD_space_explore()
-    #     homepage1.new_page()
-    #     assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
-    #
-    # def test_019_TUMIUAT_417_4(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.roll_to_bottom_AD_space()
-    #     homepage1.click_bottom_AD_space_title2()
-    #     homepage1.new_page()
-    #     assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI的独特之处'
-    #
-    # def test_020_TUMIUAT_417_5(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.roll_to_bottom_AD_space()
-    #     homepage1.click_bottom_AD_space_img2()
-    #     homepage1.new_page()
-    #     assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI的独特之处'
-    #
-    # def test_021_TUMIUAT_417_6(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.roll_to_bottom_AD_space()
-    #     homepage1.click_bottom_AD_space_explore2()
-    #     homepage1.new_page()
-    #     assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI的独特之处'
-    #
+    def test_016_TUMIUAT_672_1(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_title()
+        homepage1.new_page()
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/ '
+
+    def test_017_TUMIUAT_672_2(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_img()
+        homepage1.new_page()
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
+
+    def test_018_TUMIUAT_672_3(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_explore()
+        homepage1.new_page()
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
+
+    def test_019_TUMIUAT_672_4(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_title2()
+        homepage1.new_page()
+        assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI DIFFERENCE'
+
+    def test_020_TUMIUAT_672_5(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_img2()
+        homepage1.new_page()
+        assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI DIFFERENCE'
+
+    def test_021_TUMIUAT_672_6(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_explore2()
+        homepage1.new_page()
+        assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI DIFFERENCE'
+
     # def test_021_TUMIUAT_1515(self):
     #     homepage1 = homepage(self.driver)
     #     homepage1.login_phone_error()
@@ -230,8 +230,8 @@ class HOMEPAGE(unittest.TestCase):
     #     homepage1 = homepage(self.driver)
     #     homepage1.sign_out()
     #     assert new_find_element(self.driver, homepage.login_register_btn).text == '登录/注册'
+
+
     #
-    #
-    # #
 
 

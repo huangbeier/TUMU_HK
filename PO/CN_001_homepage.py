@@ -52,15 +52,15 @@ class homepage(page):
     #底部广告位-标题
     bottom_AD_space_title=('xpath','//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[2]/a[1]/h3[1]')
     #底部广告位-即可探索
-    bottom_AD_space_explore=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[2]/a[1]/div[1]")
+    bottom_AD_space_explore=('xpath',"/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[2]/a[1]/div[1]")
     # 底部广告位-图片
     bottom_AD_space_img=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/a[1]/img[1]")
     # 底部广告位-标题 右边的那个
     bottom_AD_space_title2 = ('xpath', '//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[2]/a[1]/h3[1]')
     #底部广告位-即可探索 右边的那个
-    bottom_AD_space_explore2=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[2]/a[1]/div[1]")
+    bottom_AD_space_explore2=('xpath',"/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[2]/a[1]/div[1]")
     # 底部广告位-图片 右边的那个
-    bottom_AD_space_img2=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/a[1]/img[1]")
+    bottom_AD_space_img2=('xpath',"/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/a[1]/img[1]")
     #登出
     sign_out_btn=('link text','登出')
 
@@ -78,7 +78,7 @@ class homepage(page):
     accessories_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
     recycled_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
     alpha3_title=('xpath',"//span[contains(text(),'全新TUMI Alpha 3系列')]")
-    tumi_different=('xpath',"//h2[contains(text(),'TUMI的独特之处')]")
+    tumi_different=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h1[1]")
     j_username_error=('id',"j_username-error")
     username_error=('xpath',"//div[contains(text(),'你的用户名或密码不正确。')]")
     j_password_error=('id',"j_password-error")
