@@ -5,9 +5,8 @@ import unittest
 from CN_001_homepage import homepage
 import time
 from selenium import webdriver
-from config import chromeDriver_Path,hk_kefu_url,hk_url,hk_cart,hk_account
+from config import chromeDriver_Path,hk_kefu_url,hk_url,hk_cart
 from utils.seleniumtools import new_find_element
-from CN_003_product_list_page import product_list
 
 class HOMEPAGE(unittest.TestCase):
     @classmethod
@@ -38,7 +37,7 @@ class HOMEPAGE(unittest.TestCase):
     def test_003_TUMIUAT_662_3(self):
         homepage1 = homepage(self.driver)
         homepage1.click_lang_selector()
-        assert new_find_element(self.driver,product_list.f_luggage).text == '旅行箱'
+        assert self.driver.current_url == f'{hk_url}zh/'
 
     def test_004_TUMIUAT_662_4(self):
         homepage1 = homepage(self.driver)
@@ -62,22 +61,22 @@ class HOMEPAGE(unittest.TestCase):
         time.sleep(0.5)
         assert new_find_element(self.driver,homepage.login_text).text == 'Log in to your TUMI.HK account'
 
-    def test_008_TUMIUAT_410(self):
+    def test_008_TUMIUAT_664(self):
         homepage1 = homepage(self.driver)
         homepage1.search_for_Effective_Products()
         time.sleep(1)
-        assert new_find_element(self.driver,homepage.keyword).text == '建议关键字 "alp"'
+        assert new_find_element(self.driver,homepage.keyword).text == 'suggested keywords "alp"'
 
-    def test_009_TUMIUAT_411(self):
+    def test_009_TUMIUAT_665(self):
         homepage1 = homepage(self.driver)
         homepage1.Search_for_Invalid_Products()
-        assert new_find_element(self.driver,homepage.no_search).text == '对不起，没有搜索结果'
+        assert new_find_element(self.driver,homepage.no_search).text == 'Sorry, no search results'
 
-    def test_010_TUMIUAT_412(self):
+    def test_010_TUMIUAT_666(self):
         homepage1 = homepage(self.driver)
         homepage1.search_for_Effective_Products()
         homepage1.click_suggested_keyword()
-        assert new_find_element(self.driver,homepage.have_search).text == '搜索结果'
+        assert new_find_element(self.driver,homepage.have_search).text == 'search results'
         assert self.driver.find_element_by_xpath('/html[1]/body[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[2]').text == '“ALPHA”'
 
     def test_010_TUMIUAT_1510_1(self):

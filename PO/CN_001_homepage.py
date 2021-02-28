@@ -34,9 +34,9 @@ class homepage(page):
     #关闭登录
     close_login=('xpath',"//body[1]/div[2]/div[2]/div[2]/div[1]/div[4]/header[1]/a[1]/span[1]")
     #搜索按钮
-    search_btn=('xpath','//body/div[2]/section[1]/div[5]/div[2]/form[1]/div[1]/button[1]')
+    search_btn=('xpath','//body/div[2]/section[1]/div[5]/div[2]/form[1]/div[1]/button[1]/span[1]')
     #建议关键字
-    suggested_keyword=('xpath',"//a[contains(text(),'alpha')]")
+    suggested_keyword=('xpath',"//body/div[2]/section[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/span[1]/a[1]")
     #分类广告位-旅行箱
     f_luggage=('id',"luggage")
     #分类广告位-背包
@@ -68,8 +68,8 @@ class homepage(page):
     wechat_text=('xpath','//header/div[3]/div[2]/a[2]/div[1]/div[2]/p[1]')
     store_type=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/div[3]")
     login_text=('xpath',"/html[1]/body[1]/div[2]/div[2]/div[2]/div[1]/div[1]/header[1]/span[1]")
-    no_search=('xpath',"//div[contains(text(),'对不起，没有搜索结果')]")
-    have_search=('xpath',"//div[contains(text(),'搜索结果')]")
+    no_search=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]")
+    have_search=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[1]")
     luggage_title=('xpath',"//span[contains(text(),'各类旅行箱 - 托运旅行箱、登机箱')]")
     backpacks_title = ('xpath', "//span[contains(text(),'各类背包 - 商务、旅行、休闲背包')]")
     crossbodies_title=('xpath',"//span[contains(text(),'托特包 - 手拎包、手袋')]")
@@ -172,6 +172,7 @@ class homepage(page):
     def search_for_Effective_Products(self):
         self.input_text(self.search,text='alp')
         self.action(self.search)
+
     def click_suggested_keyword(self):
         self.click(self.suggested_keyword)
         time.sleep(1)
