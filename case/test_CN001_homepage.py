@@ -79,10 +79,10 @@ class HOMEPAGE(unittest.TestCase):
         assert new_find_element(self.driver,homepage.have_search).text == 'SEARCH RESULTS'
         assert self.driver.find_element_by_xpath('/html[1]/body[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[2]').text == '"ALPHA"'
 
-    def test_010_TUMIUAT_1521_1(self):
-        homepage1 = homepage(self.driver)
-        homepage1.click_f_luggage()
-        assert new_find_element(self.driver,homepage.luggage_title).text =='All Luggage, from Checked Bags to Backpacks'
+    # def test_010_TUMIUAT_1521_1(self):
+    #     homepage1 = homepage(self.driver)
+    #     homepage1.click_f_luggage()
+    #     assert new_find_element(self.driver,homepage.luggage_title).text =='All Luggage, from Checked Bags to Backpacks'
 
     def test_011_TUMIUAT_1521_2(self):
         homepage1 = homepage(self.driver)
@@ -114,7 +114,7 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_title()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/ '
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
 
     def test_017_TUMIUAT_672_2(self):
         homepage1 = homepage(self.driver)
