@@ -70,44 +70,44 @@ class HOMEPAGE(unittest.TestCase):
     def test_009_TUMIUAT_665(self):
         homepage1 = homepage(self.driver)
         homepage1.Search_for_Invalid_Products()
-        assert new_find_element(self.driver,homepage.no_search).text == 'Sorry, no search results'
+        assert new_find_element(self.driver,homepage.no_search).text == 'SORRY, NO SEARCH RESULTS'
 
     def test_010_TUMIUAT_666(self):
         homepage1 = homepage(self.driver)
         homepage1.search_for_Effective_Products()
         homepage1.click_suggested_keyword()
-        assert new_find_element(self.driver,homepage.have_search).text == 'search results'
-        assert self.driver.find_element_by_xpath('/html[1]/body[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[2]').text == '“ALPHA”'
+        assert new_find_element(self.driver,homepage.have_search).text == 'SEARCH RESULTS'
+        assert self.driver.find_element_by_xpath('ml[1]/body[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[2]').text == '"ALPHA"'
 
-    def test_010_TUMIUAT_1510_1(self):
+    def test_010_TUMIUAT_1521_1(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_luggage()
-        assert new_find_element(self.driver,homepage.luggage_title).text =='各类旅行箱 - 托运旅行箱、登机箱'
+        assert new_find_element(self.driver,homepage.luggage_title).text =='All Luggage, from Checked Bags to Backpacks'
 
-    def test_011_TUMIUAT_1510_2(self):
+    def test_011_TUMIUAT_1521_2(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_backpacks()
-        assert new_find_element(self.driver,homepage.backpacks_title).text =='各类背包 - 商务、旅行、休闲背包'
+        assert new_find_element(self.driver,homepage.backpacks_title).text =='Leather Backpacks & Sling Bags'
 
-    def test_012_TUMIUAT_1510_3(self):
+    def test_012_TUMIUAT_1521_3(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_totes()
-        assert new_find_element(self.driver,homepage.totes_title).text =='斜挎包 - 休闲斜挎包'
+        assert new_find_element(self.driver,homepage.totes_title).text =='Tote Bags for Men & Women'
 
-    def test_013_TUMIUAT_1510_4(self):
+    def test_013_TUMIUAT_1521_4(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_crossbodies()
-        assert new_find_element(self.driver,homepage.crossbodies_title).text =='托特包 - 手拎包、手袋'
+        assert new_find_element(self.driver,homepage.crossbodies_title).text =='Cross Body Bags, Carry On Luggage & Totes'
 
-    def test_014_TUMIUAT_1510_5(self):
+    def test_014_TUMIUAT_1521_5(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_accessories()
-        assert new_find_element(self.driver,homepage.accessories_title).text =='各类旅行配件、电子产品、钱包等'
+        assert new_find_element(self.driver,homepage.accessories_title).text =='All Accessories, Electronics, Wallets & Money Clips'
 
-    def test_015_TUMIUAT_1510_6(self):
+    def test_015_TUMIUAT_1521_6(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_recycled()
-        assert new_find_element(self.driver,homepage.recycled_title).text =='由可回收材料制成的环保系列'
+        assert new_find_element(self.driver,homepage.recycled_title).text =="Men's & Women's styles made from recycled materials"
 
     def test_016_TUMIUAT_417_1(self):
         homepage1 = homepage(self.driver)
