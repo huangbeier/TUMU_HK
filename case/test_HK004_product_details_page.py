@@ -6,10 +6,10 @@ import time
 from selenium import webdriver
 from config import chromeDriver_Path,cn_url
 from utils.seleniumtools import new_find_element
-from CN_003_product_list_page import product_list
+from HK_003_product_list_page import product_list
 from config import cn_url
-from CN_004_product_details_page import product_details_page
-from CN_001_homepage import homepage
+from HK_004_product_details_page import product_details_page
+from HK_001_homepage import homepage
 
 class Product_list(unittest.TestCase):
     @classmethod

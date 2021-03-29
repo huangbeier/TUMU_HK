@@ -3,7 +3,7 @@
 #   2021-02-15
 from base_page import page
 import time
-from CN_001_homepage import homepage
+from HK_001_homepage import homepage
 
 class product_list(page):
     # 首页-一级标签-查看全部

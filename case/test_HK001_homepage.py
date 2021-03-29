@@ -2,7 +2,7 @@
 # @Time ：2021/2/7__13:37
 # #coding:utf-8
 import unittest
-from CN_001_homepage import homepage
+from HK_001_homepage import homepage
 import time
 from selenium import webdriver
 from config import chromeDriver_Path,hk_kefu_url,hk_url,hk_cart

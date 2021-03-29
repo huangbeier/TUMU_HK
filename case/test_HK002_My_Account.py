@@ -2,12 +2,12 @@
 # @Time ：2021/2/9__13:39
 # #coding:utf-8
 import unittest
-from CN_002_My_Account import my_account
+from HK_002_My_Account import my_account
 import time
 from selenium import webdriver
 from config import chromeDriver_Path,cn_url
 from utils.seleniumtools import new_find_element
-from CN_001_homepage import homepage
+from HK_001_homepage import homepage
 
 
 class MyAccount(unittest.TestCase):

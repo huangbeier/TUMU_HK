@@ -3,7 +3,7 @@
 # #coding:utf-8
 from base_page import page
 import time
-from CN_001_homepage import homepage
+from HK_001_homepage import homepage
 
 class my_account(page):
 
