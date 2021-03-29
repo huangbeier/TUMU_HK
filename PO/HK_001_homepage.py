@@ -62,7 +62,7 @@ class homepage(page):
     # 底部广告位-图片 右边的那个
     bottom_AD_space_img2=('xpath',"/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/a[1]/img[1]")
     #登出
-    sign_out_btn=('link text','登出')
+    sign_out_btn=('link text','Logout')
 
     vip_Privilege=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/h4[1]")
     wechat_text=('xpath','//header/div[3]/div[2]/a[2]/div[1]/div[2]/p[1]')
@@ -80,7 +80,7 @@ class homepage(page):
     alpha3_title=('xpath',"//span[contains(text(),'全新TUMI Alpha 3系列')]")
     tumi_different=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h1[1]")
     j_username_error=('id',"j_username-error")
-    username_error=('xpath',"//div[contains(text(),'你的用户名或密码不正确。')]")
+    username_error=('xpath','//*[@id="tm-login-form"]/div[4]/div')
     j_password_error=('id',"j_password-error")
 
     def __init__(self,driver):
@@ -89,8 +89,8 @@ class homepage(page):
     def login(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone,text='17316565325')
-        self.input_text(self.password,text='gxjy541')
+        self.input_text(self.phone,text='90000001')
+        self.input_text(self.password,text='1111qqqq')
         self.click(self.login_btn)
         time.sleep(1.5)
         self.click(self.close_login)
@@ -99,7 +99,7 @@ class homepage(page):
     def login2(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone, text='17316565325')
+        self.input_text(self.phone, text='90000001')
         self.input_text(self.password, text='1qaz2wsx')
         self.click(self.login_btn)
         time.sleep(1.5)
@@ -116,15 +116,15 @@ class homepage(page):
     def login_no_phone(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.password,text='gxjy541')
+        self.input_text(self.password,text='1111qqqq')
         self.click(self.login_btn)
         time.sleep(1)
 
     def login_phone_error(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone, text='17316565329')
-        self.input_text(self.password,text='gxjy541')
+        self.input_text(self.phone, text='90000111')
+        self.input_text(self.password,text='1111qqqq')
         self.click(self.login_btn)
         time.sleep(1)
 
@@ -138,7 +138,7 @@ class homepage(page):
     def login_password_error(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone, text='17316565325')
+        self.input_text(self.phone, text='90000001')
         self.input_text(self.password,text='gxjy5411')
         self.click(self.login_btn)
         time.sleep(1)

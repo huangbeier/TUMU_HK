@@ -5,7 +5,7 @@ import unittest
 from HK_001_homepage import homepage
 import time
 from selenium import webdriver
-from config import chromeDriver_Path,hk_kefu_url,hk_url,hk_cart
+from config import chromeDriver_Path,hk_kefu_url,hk_url,hk_cart,hk_account
 from utils.seleniumtools import new_find_element
 
 class HOMEPAGE(unittest.TestCase):
@@ -114,21 +114,24 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_title()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
+        time.sleep(2)
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/c-collections/alpha3/?q=:relevance&pageSize=30&page=0&sort=relevance'
 
     def test_017_TUMIUAT_672_2(self):
         homepage1 = homepage(self.driver)
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_img()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
+        time.sleep(2)
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/c-collections/alpha3/?q=:relevance&pageSize=30&page=0&sort=relevance'
 
     def test_018_TUMIUAT_672_3(self):
         homepage1 = homepage(self.driver)
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_explore()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://stage.tumi-hk.com/Alpha3/'
+        time.sleep(2)
+        assert self.driver.current_url == 'https://stage.tumi-hk.com/c-collections/alpha3/?q=:relevance&pageSize=30&page=0&sort=relevance'
 
     def test_019_TUMIUAT_672_4(self):
         homepage1 = homepage(self.driver)
@@ -151,85 +154,79 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.new_page()
         assert new_find_element(self.driver,homepage.tumi_different).text =='TUMI DIFFERENCE'
 
-    # def test_021_TUMIUAT_1515(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login_phone_error()
-    #     time.sleep(2)
-    #     assert new_find_element(self.driver, homepage.username_error).text == '你的用户名或密码不正确。'
+    def test_021_TUMIUAT_1531(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_phone_error()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage.username_error).text == 'Your username or password is incorrect.'
     #
-    # def test_022_TUMIUAT_1514(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login_no_phone()
-    #     time.sleep(2)
-    #     assert new_find_element(self.driver, homepage.j_username_error).text == '手机/邮箱 为必填选项'
-    #
-    # def test_023_TUMIUAT_423(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login_no_password()
-    #     time.sleep(2)
-    #     assert new_find_element(self.driver, homepage.j_password_error).text == '密码 为必填选项'
-    #
-    # def test_024_TUMIUAT_424(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login_password_error()
-    #     time.sleep(2)
-    #     assert new_find_element(self.driver, homepage.username_error).text == '你的用户名或密码不正确。'
-    #
-    # def test_025_TUMIUAT_409_1(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.click_logo()
-    #     assert self.driver.current_url == cn_url
-    #     homepage1.sign_out()
-    #
-    # def test_026_TUMIUAT_409_2(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.click_vip_club()
-    #     assert self.driver.current_url == f'{cn_url}tumi-club/'
-    #     assert new_find_element(self.driver,homepage.vip_Privilege).text == '会员专属礼遇'
-    #     homepage1.sign_out()
-    #
-    # def test_026_TUMIUAT_409_3(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.move_to_wechat()
-    #     homepage1.sign_out()
-    #     # assert new_find_element(self.driver,assert_element.wechat_text).text == '扫一扫进入TUMI途明 微信精品店'
-    #
-    # def test_027_TUMIUAT_409_4(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.click_offline_store()
-    #     assert self.driver.current_url == f'{cn_url}store-locator/'
-    #     assert new_find_element(self.driver,homepage.store_type).text == '门店类型'
-    #     homepage1.sign_out()
-    #
-    # def test_028_TUMIUAT_409_6(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.click_cart()
-    #     time.sleep(1)
-    #     assert self.driver.current_url == cn_cart
-    #     homepage1.sign_out()
-    #
-    # def test_029_TUMIUAT_409_7(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.click_my_username()
-    #     assert self.driver.current_url == cn_account
-    #     homepage1.sign_out()
-    #
-    # def test_030_TUMIUAT_409_5(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.login()
-    #     homepage1.click_customer_service()
-    #     assert self.driver.current_url == cn_kefu_url
-    #
-    # def test_031_TUMIUAT_426(self):
-    #     homepage1 = homepage(self.driver)
-    #     homepage1.sign_out()
-    #     assert new_find_element(self.driver, homepage.login_register_btn).text == '登录/注册'
+    def test_022_TUMIUAT_1532(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_no_phone()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage.j_username_error).text == 'Phone is required.'
+
+    def test_023_TUMIUAT_677(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_no_password()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage.j_password_error).text == 'Password is required.'
+
+    def test_024_TUMIUAT_678(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_password_error()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage.username_error).text == 'Your username or password is incorrect.'
+
+    def test_025_TUMIUAT_663_1(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.click_logo()
+        assert self.driver.current_url == hk_url
+        homepage1.sign_out()
+
+    def test_026_TUMIUAT_663_2(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.click_vip_club()
+        assert self.driver.current_url == f'{hk_url}tumi-exclusives-club/'
+        assert new_find_element(self.driver,homepage.vip_Privilege).text == 'TUMI Exclusives Club Benefits'
+        homepage1.sign_out()
+
+
+    def test_027_TUMIUAT_663_4(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.click_offline_store()
+        assert self.driver.current_url == f'{hk_url}store-locator/'
+        assert new_find_element(self.driver,homepage.store_type).text == 'Store Type'
+        homepage1.sign_out()
+
+    def test_028_TUMIUAT_663_6(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.click_cart()
+        time.sleep(1)
+        assert self.driver.current_url == hk_cart
+        homepage1.sign_out()
+
+    def test_029_TUMIUAT_663_7(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.click_my_username()
+        assert self.driver.current_url == hk_account
+        homepage1.sign_out()
+
+    def test_030_TUMIUAT_663_5(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.click_customer_service()
+        assert self.driver.current_url == hk_kefu_url
+
+    def test_031_TUMIUAT_426(self):
+        homepage1 = homepage(self.driver)
+        homepage1.sign_out()
+        assert new_find_element(self.driver, homepage.login_register_btn).text == 'Login / Register'
 
 
     #
