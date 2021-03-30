@@ -5,7 +5,7 @@ import unittest
 from HK_002_My_Account import my_account
 import time
 from selenium import webdriver
-from config import chromeDriver_Path,cn_url
+from config import chromeDriver_Path,hk_url
 from utils.seleniumtools import new_find_element
 from HK_001_homepage import homepage
 
@@ -18,7 +18,7 @@ class MyAccount(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
     def setUp(self):
-        self.driver.get(cn_url)
+        self.driver.get(hk_url)
         self.driver.maximize_window()
         self.driver.refresh()
         time.sleep(2)
