@@ -47,7 +47,7 @@ class product_list(page):
     #二级页面-比较报错
     compare_error =('xpath','//body/div[1]/main[1]/div[2]/div[1]')
     #二级页面-隐藏筛选
-    hide_the_screening = ('xpath',"//span[contains(text(),'隐藏筛选')]")
+    hide_the_screening = ('xpath',"//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]/span[2]/span[2]")
     #二级页面-显示筛选
     display_screen=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]/span[1]')
     #二级页面-筛选-系列
@@ -72,10 +72,10 @@ class product_list(page):
     screening_roller = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[10]/h4[1]/a[1]')
     #二级页面-系列筛选
     screening_series_btn=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/h4[1]/a[1]')
-    #二级页面-merga系列
-    merge_serise=('xpath','/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[6]/form[1]/input[3]')
-    #二级页面-merga系列数量
-    merga_num=('xpath','/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[6]/form[1]/label[1]/span[1]/span[1]')
+    #二级页面-merge系列
+    merge_serise=('xpath',"//input[@id='facet-:relevance:collection:Merge']")
+    #二级页面-merge系列数量
+    merga_num=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[5]/form[1]/label[1]/span[1]/span[1]')
     #二级页面-被筛选出的产品数量
     mergaNum = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/span[1]/span[1]')
     #二级页面-顶部筛选框
@@ -85,7 +85,7 @@ class product_list(page):
     # 二级页面-价格从高到低
     price_desc=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/span[1]/ul[1]/li[5]/a[1]')
     #二级页面-筛选-最低价格的产品价格
-    lowest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/span[1]')
+    lowest_price=('xpath','/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]')
     # 二级页面-筛选-最高价格的产品价格
     highest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]')
     #二级分类-商品标签

@@ -123,57 +123,53 @@ class Product_list(unittest.TestCase):
         product_list1.click_del_product()
         product_list1.click_t_compare()
 
-    def test_072_TUMIUAT_454(self):
+    def test_072_TUMIUAT_713(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
-        assert new_find_element(self.driver,product_list.hide_the_screening).text == '隐藏筛选'
-        assert new_find_element(self.driver, product_list.screening_series).text == '系列'
-        assert new_find_element(self.driver, product_list.screening_color).text == '颜色组'
-        assert new_find_element(self.driver, product_list.screening_prices).text == '价格'
-        assert new_find_element(self.driver, product_list.screening_material).text == '材料'
-        assert new_find_element(self.driver, product_list.screening_sex).text == '性别'
-        # assert new_find_element(self.driver, product_list.screening_function).text == '专属功能'
-        assert new_find_element(self.driver, product_list.screening_size).text == '电脑尺寸'
-        assert new_find_element(self.driver, product_list.screening_type).text == '产品类型'
-        assert new_find_element(self.driver, product_list.screening_luggage_size).text == '行李箱尺寸'
-        assert new_find_element(self.driver, product_list.screening_roller).text == '滚轮数量'
+        assert new_find_element(self.driver,product_list.hide_the_screening).text == 'Hide Filter'
+        assert new_find_element(self.driver, product_list.screening_series).text == 'Collection'
+        assert new_find_element(self.driver, product_list.screening_color).text == 'Color Family'
+        assert new_find_element(self.driver, product_list.screening_prices).text == 'Price'
 
-    def test_073_TUMIUAT_456(self):
+
+    def test_073_TUMIUAT_715(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
+        time.sleep(2)
         product_list1.click_screening_series_btn()
         product_list1.click_merge_serise()
         a=new_find_element(self.driver,product_list.merga_num).text
-        b=a.replace('（','').replace('）','').strip()
-        time.sleep(3)
+        b=a.replace('(','').replace(')','').strip()
+        time.sleep(5)
         assert b == new_find_element(self.driver,product_list.mergaNum).text
 
-    def test_074_TUMIUAT_457(self):
+    def test_074_TUMIUAT_716(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_hide_the_screening()
-        assert new_find_element(self.driver,product_list.display_screen).text == '显示筛选'
+        assert new_find_element(self.driver,product_list.display_screen).text == 'Show Filter'
 
-    def test_075_TUMIUAT_459(self):
+    def test_075_TUMIUAT_717(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_sortOptions1SelectBoxItText()
         product_list1.click_price_asc()
         time.sleep(5)
-        assert new_find_element(self.driver,product_list.lowest_price).get_attribute('textContent') == '¥0.01'
+        assert new_find_element(self.driver, product_list.lowest_price).text == 'HK$4,090.00'
 
-    def test_076_TUMIUAT_460(self):
+
+    def test_076_TUMIUAT_718(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_sortOptions1SelectBoxItText()
         product_list1.click_price_desc()
         time.sleep(1)
-        assert new_find_element(self.driver,product_list.highest_price).get_attribute('textContent') == '¥14,990.00'
+        assert new_find_element(self.driver,product_list.highest_price).text == 'HK$15,000.00'
 
     def test_077_TUMIUAT_461(self):
         product_list1 = product_list(self.driver)
