@@ -96,7 +96,7 @@ class MyAccount(unittest.TestCase):
         my_account1.click_account_save_btn()
         assert new_find_element(self.driver,my_account.userName_errors).text== 'Please enter a username.'
 
-    def test_039_TUMIUAT_1578(self):
+    def test_039_TUMIUAT_1604(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_update_my_info()
@@ -107,9 +107,9 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver,my_account.titleCode_errors).text== '请选择您的称呼'
+        assert new_find_element(self.driver,my_account.titleCode_errors).text== 'Please choose your title.'
 
-    def test_040_TUMIUAT_1579(self):
+    def test_040_TUMIUAT_1605(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_update_my_info()
@@ -120,9 +120,9 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_password).text == 'Update Password'
 
-    def test_041_TUMIUAT_1582(self):
+    def test_041_TUMIUAT_1608(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_update_my_info()
@@ -132,9 +132,9 @@ class MyAccount(unittest.TestCase):
         my_account1.click_call_miss()
         my_account1.clear_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.email_error).text == 'E-mail is required.'
 
-    def test_042_TUMIUAT_1583(self):
+    def test_042_TUMIUAT_1609(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_update_my_info()
@@ -145,7 +145,7 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_no_save()
-        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_password).text == 'Update Password'
 
     def test_043_TUMIUAT_571(self):
         my_account1 = my_account(self.driver)
@@ -157,9 +157,10 @@ class MyAccount(unittest.TestCase):
         my_account1.click_address_region()
         my_account1.click_address_beijing()
         my_account1.click_address_qu()
+        my_account1.click_address_qu1()
         my_account1.input_address_Detailed()
         my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
+        assert new_find_element(self.driver, my_account.creat_new_address).text == 'Add Shipping Address'
 
     def test_044_TUMIUAT_572(self):
         my_account1 = my_account(self.driver)

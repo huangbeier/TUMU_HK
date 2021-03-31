@@ -34,6 +34,8 @@ class my_account(page):
     call_miss = ('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[2]/div[2]/form[1]/div[1]/div[1]/div[3]/div[1]/div[3]/span[1]/ul[1]/li[2]/a[1]')
     #更新个人信息邮箱
     account_email=('id','profile.email')
+    #更新个人信息email报错
+    email_error=('id','email.errors')
     #更新保存按钮
     account_save_btn=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[2]/div[2]/form[1]/div[3]/button[1]')
     #取消保存按钮
@@ -47,19 +49,21 @@ class my_account(page):
     #称呼-请选择
     call_null=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[2]/div[2]/form[1]/div[1]/div[1]/div[3]/div[1]/div[3]/span[1]/ul[1]/li[1]/a[1]')
     #切换到地址簿
-    address_book_btn=('xpath',"//a[contains(text(),'我的地址簿')]")
+    address_book_btn=('xpath',"//a[contains(text(),'My address book')]")
     #新增地址
-    creat_new_address=('xpath',"//span[contains(text(),'添加收货地址')]")
+    creat_new_address=('xpath',"//span[contains(text(),'Add shipping address')]")
     #地址-收货人输入框
     address_consignee=('id','addressEditTo')
     #地址-手机号输入框
     address_phone=('id','addressEditMobile')
     #地址-点击地区
     address_region=('id','addressEditCityarea')
-    #地址-北京
-    address_beijing=('xpath',"//a[contains(text(),'北京')]")
+    #地址-香港
+    address_beijing=('xpath',"//a[contains(text(),'Hongkong')]")
     #地址-区
-    address_qu=('xpath',"//a[contains(text(),'东城区')]")
+    address_qu=('xpath',"//a[contains(text(),'Kowloon')]")
+    #地址-地区
+    address_qu1=('xpath',"//a[contains(text(),'Wong Tai Sin')]")
     #地址-详细地址输入框
     address_Detailed=('id','addressEditDetail')
     #地址-保存
@@ -98,6 +102,7 @@ class my_account(page):
     newPassword_errors=('id','newPassword.errors')
     #修改密码-确认密码报错
     checkNewPassword_errors=('id','checkNewPassword.errors')
+
 
     my_account_title = ('xpath', "//h2[contains(text(),'My Account')]")
     store_name = ('xpath', "//body/div[1]/main[1]/div[1]/div[2]/div[3]/div[1]/h2[1]")
@@ -202,6 +207,9 @@ class my_account(page):
 
     def click_address_qu(self):
         self.click(self.address_qu)
+
+    def click_address_qu1(self):
+        self.click(self.address_qu1)
 
     def input_address_Detailed(self):
         self.input_text(self.address_Detailed,text='测试地址')
