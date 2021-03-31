@@ -9,29 +9,29 @@ class product_list(page):
     # 首页-一级标签-查看全部
     all_product = ('xpath', '//body/div[1]/main[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]')
     #首页-一级标签-旅行箱
-    f_luggage=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[2]/a[1]')
+    f_luggage=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[2]/li[2]/a[1]')
     #首页-旅行箱-查看全部
     f_luggage_all=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[2]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[4]/a[1]')
     #首页-一级标签-背包
-    f_backpack=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[3]/a[1]')
+    f_backpack=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[2]/li[3]/a[1]')
     #首页-一级标签-包袋
-    f_bag=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[4]/a[1]')
+    f_bag=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[2]/li[4]/a[1]')
     #首页-一级标签-钱包及配件
-    f_accessories=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[5]/a[1]')
+    f_accessories=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[2]/li[5]/a[1]')
     #首页-一级标签-系列
-    f_series=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[6]/a[1]')
+    f_series=('xpath','//body/div[2]/section[1]/nav[1]/ul[1]/div[2]/li[6]/a[1]')
     #首页-一级标签-环保产品
-    f_Environmental_protection_product=('xpath',"//a[contains(text(),'环保产品')]")
+    f_Environmental_protection_product=('xpath',"//a[contains(text(),'RECYCLED CAPSULE')]")
     # 首页-一级标签-个性化定制
     f_diy = ('xpath', '//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[8]/a[1]')
     # 首页-一级标签-礼物推荐
-    f_recommended = ('xpath', '//body/div[2]/section[1]/nav[1]/ul[1]/div[1]/li[9]/a[1]')
+    f_recommended = ('xpath', '//body/div[2]/section[1]/nav[1]/ul[1]/div[2]/li[8]/a[1]')
     #一级页面旅行箱-首页面包屑
-    f_homepage=('xpath',"//span[contains(text(),'首页')]")
+    f_homepage=('xpath',"//span[contains(text(),'Home')]")
     #一级页面-旅行箱-二级标签立即购买
     s_luggage_buy=('xpath','//body/div[1]/main[1]/div[2]/div[1]/div[4]/ul[1]/li[1]/div[1]/a[2]')
     #二级页面-登机箱
-    s_luggage_title=('xpath',"//span[contains(text(),'登机箱 - 旅行拉杆箱')]")
+    s_luggage_title=('xpath',"//span[contains(text(),'Carry On Luggage - Travel Rolling Luggage')]")
     #二级页面-第一个产品比较框
     f_compare=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/label[1]')
     # 二级页面-第二个产品比较框

@@ -4,10 +4,10 @@
 import unittest
 import time
 from selenium import webdriver
-from config import chromeDriver_Path,cn_url
+from config import chromeDriver_Path,hk_url
 from utils.seleniumtools import new_find_element
 from HK_003_product_list_page import product_list
-from config import cn_url
+from config import hk_url
 from HK_001_homepage import homepage
 
 class Product_list(unittest.TestCase):
@@ -18,77 +18,77 @@ class Product_list(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
     def setUp(self):
-        self.driver.get(cn_url)
+        self.driver.get(hk_url)
         self.driver.maximize_window()
         self.driver.refresh()
         time.sleep(2)
 
-    def test_058_TUMIUAT_449_1(self):
+    def test_058_TUMIUAT_706_1(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_f_homepage()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
-    def test_059_TUMIUAT_449_2(self):
+    def test_059_TUMIUAT_706_2(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_backpack()
         product_list1.click_f_homepage()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
-    def test_060_TUMIUAT_449_3(self):
+    def test_060_TUMIUAT_706_3(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_bag()
         product_list1.click_f_homepage()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
-    def test_061_TUMIUAT_449_4(self):
+    def test_061_TUMIUAT_706_4(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_accessories()
         product_list1.click_f_homepage()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
-    def test_062_TUMIUAT_449_5(self):
+    def test_062_TUMIUAT_706_5(self):
         product_list1=product_list(self.driver)
-        product_list1.click_f_diy()
+        product_list1.click_f_recommended()
         product_list1.click_f_homepage()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
-    def test_063_TUMIUAT_450_1(self):
+    def test_063_TUMIUAT_707_1(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_all_product()
-        assert new_find_element(self.driver,homepage.luggage_title).text  == '各类旅行箱 - 托运旅行箱、登机箱'
+        assert new_find_element(self.driver,homepage.luggage_title).text  == 'All Luggage, from Checked Bags to Backpacks'
 
-    def test_064_TUMIUAT_450_2(self):
+    def test_064_TUMIUAT_707_2(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_backpack()
         product_list1.click_all_product()
-        assert new_find_element(self.driver,homepage.backpacks_title).text  == '各类背包 - 商务、旅行、休闲背包'
+        assert new_find_element(self.driver,homepage.backpacks_title).text  == 'Leather Backpacks & Sling Bags'
 
-    def test_065_TUMIUAT_450_3(self):
+    def test_065_TUMIUAT_707_3(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_bag()
         product_list1.click_all_product()
-        assert new_find_element(self.driver,homepage.bag_title).text  == '各类手袋 - 手拎包、斜挎包、公文包'
+        assert new_find_element(self.driver,homepage.bag_title).text  == 'All Bags, Briefcases, Totes, Duffel Bags & Luggage'
 
-    def test_066_TUMIUAT_450_4(self):
+    def test_066_TUMIUAT_707_4(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_accessories()
         product_list1.click_all_product()
-        assert new_find_element(self.driver,homepage.accessories_title).text  == '各类旅行配件、电子产品、钱包等'
+        assert new_find_element(self.driver,homepage.accessories_title).text  == 'All Accessories, Electronics, Wallets & Money Clips'
 
-    def test_067_TUMIUAT_451(self):
+    def test_067_TUMIUAT_708(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
-        assert new_find_element(self.driver,product_list.s_luggage_title).text == '登机箱 - 旅行拉杆箱'
+        assert new_find_element(self.driver,product_list.s_luggage_title).text == 'Carry On Luggage - Travel Rolling Luggage'
 
     def test_068_TUMIUAT_452(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_f_homepage()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
     def test_069_TUMIUAT_453_1(self):
         product_list1=product_list(self.driver)
@@ -246,7 +246,7 @@ class Product_list(unittest.TestCase):
         # product_list1.click_s_compare()
         product_list1.click_immediately_to_compare()
         product_list1.click_continue_shopping()
-        assert self.driver.current_url == cn_url
+        assert self.driver.current_url == hk_url
 
     def test_084_TUMIUAT_474(self):
         product_list1 = product_list(self.driver)

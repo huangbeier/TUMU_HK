@@ -73,7 +73,7 @@ class homepage(page):
     luggage_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
     backpacks_title = ('xpath', "/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
     crossbodies_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
-    bag_title=('xpath',"//span[contains(text(),'各类手袋 - 手拎包、斜挎包、公文包')]")
+    bag_title=('xpath',"//span[contains(text(),'All Bags, Briefcases, Totes, Duffel Bags & Luggage')]")
     totes_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
     accessories_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
     recycled_title=('xpath',"/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[1]/div[1]/div[1]/h1[1]/span[1]")
