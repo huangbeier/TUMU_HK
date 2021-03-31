@@ -239,7 +239,7 @@ class my_account(page):
         self.click(self.update_my_password)
 
     def input_now_password(self):
-        self.input_text(self.now_password,text='gxjy541')
+        self.input_text(self.now_password,text='1111qqqq')
 
     def input_now_password2(self):
         self.input_text(self.now_password,text='1qaz2wsx')
@@ -248,13 +248,13 @@ class my_account(page):
         self.input_text(self.new_password,text='1qaz2wsx')
 
     def input_new_password2(self):
-        self.input_text(self.new_password,text='gxjy541')
+        self.input_text(self.new_password,text='1111qqqq')
 
     def input_confirm_new_password(self):
         self.input_text(self.confirm_new_password,text='1qaz2wsx')
 
     def input_confirm_new_password2(self):
-        self.input_text(self.confirm_new_password,text='gxjy541')
+        self.input_text(self.confirm_new_password,text='1111qqqq')
 
     def click_save_new_password(self):
         self.click(self.save_new_password)
