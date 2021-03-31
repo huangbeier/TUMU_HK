@@ -223,7 +223,7 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.click_customer_service()
         assert self.driver.current_url == hk_kefu_url
 
-    def test_031_TUMIUAT_426(self):
+    def test_031_TUMIUAT_681(self):
         homepage1 = homepage(self.driver)
         homepage1.sign_out()
         assert new_find_element(self.driver, homepage.login_register_btn).text == 'Login / Register'
