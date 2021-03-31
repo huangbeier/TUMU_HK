@@ -83,33 +83,33 @@ class Product_list(unittest.TestCase):
         product_list1.click_s_luggage_buy()
         assert new_find_element(self.driver,product_list.s_luggage_title).text == 'Carry On Luggage - Travel Rolling Luggage'
 
-    def test_068_TUMIUAT_452(self):
+    def test_068_TUMIUAT_711(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_f_homepage()
         assert self.driver.current_url == hk_url
 
-    def test_069_TUMIUAT_453_1(self):
+    def test_069_TUMIUAT_712_1(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_f_compare()
-        assert new_find_element(self.driver,product_list.compare_text).text == '添加1或2个商品'
+        assert new_find_element(self.driver,product_list.compare_text).text == 'Add 1 or 2 items'
         product_list1.click_f_compare()
 
-    def test_070_TUMIUAT_453_2(self):
+    def test_070_TUMIUAT_712_2(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_f_compare()
         product_list1.click_s_compare()
-        assert new_find_element(self.driver,product_list.immediately_to_compare).text == '立即比较'
+        assert new_find_element(self.driver,product_list.immediately_to_compare).text == 'Compare now'
         product_list1.click_immediately_to_compare()
         product_list1.click_del_product()
         product_list1.click_s_compare()
 
-    def test_071_TUMIUAT_453_3(self):
+    def test_071_TUMIUAT_712_3(self):
         product_list1=product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
@@ -117,7 +117,7 @@ class Product_list(unittest.TestCase):
         product_list1.click_s_compare()
         product_list1.click_t_compare()
         product_list1.click_fo_compare()
-        assert new_find_element(self.driver,product_list.compare_error).text == '您一次最多可以比较3个产品'
+        assert new_find_element(self.driver,product_list.compare_error).text == 'YOU CAN COMPARE UP TO 3 PRODUCTS AT A TIME'
         product_list1.click_immediately_to_compare()
         product_list1.click_del_product()
         product_list1.click_del_product()
