@@ -79,7 +79,7 @@ class my_account(page):
     #地址-手机号报错
     phoneErrors=('id','phone.errors')
     #地址-设为默认地址
-    default_address=('xpath',"//label[contains(text(),'设为默认地址')]")
+    default_address=('xpath',"//label[contains(text(),'SET AS DEFAULT ADDRESS')]")
     #地址-固定电话-区号
     addressEditAreaCode=('id','addressEditAreaCode')
     #地址-固定电话-电话号
@@ -197,7 +197,7 @@ class my_account(page):
         self.input_text(self.address_phone,text='17311111111')
 
     def input_address_phone2(self):
-        self.input_text(self.address_phone,text='27311111111')
+        self.input_text(self.address_phone,text='9000000')
 
     def click_address_region(self):
         self.click(self.address_region)

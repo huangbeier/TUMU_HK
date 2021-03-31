@@ -147,7 +147,7 @@ class MyAccount(unittest.TestCase):
         my_account1.click_no_save()
         assert new_find_element(self.driver, my_account.update_my_password).text == 'Update Password'
 
-    def test_043_TUMIUAT_571(self):
+    def test_043_TUMIUAT_1614(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_address_book_btn()
@@ -170,16 +170,16 @@ class MyAccount(unittest.TestCase):
         my_account1.input_address_consignee()
         my_account1.input_address_Detailed()
         my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
+        assert new_find_element(self.driver, my_account.creat_new_address).text == 'Add Shipping Address'
 
-    def test_045_TUMIUAT_573(self):
+    def test_045_TUMIUAT_831(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_address_book_btn()
         my_account1.click_address_del()
         assert new_find_element(self.driver, my_account.address_name).text != '测试测试测试测试'
 
-    def test_046_TUMIUAT_1584(self):
+    def test_046_TUMIUAT_1610(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_address_book_btn()
@@ -189,11 +189,12 @@ class MyAccount(unittest.TestCase):
         my_account1.click_address_region()
         my_account1.click_address_beijing()
         my_account1.click_address_qu()
+        my_account1.click_address_qu1()
         my_account1.input_address_Detailed()
         my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.nameErrors).text == '收货人为必填信息'
+        assert new_find_element(self.driver, my_account.nameErrors).text == 'Please enter the correct consignee information'
 
-    def test_047_TUMIUAT_1585(self):
+    def test_047_TUMIUAT_1611(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_address_book_btn()
@@ -203,11 +204,12 @@ class MyAccount(unittest.TestCase):
         my_account1.click_address_region()
         my_account1.click_address_beijing()
         my_account1.click_address_qu()
+        my_account1.click_address_qu1()
         my_account1.input_address_Detailed()
         my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.phoneErrors).text == '请输入正确的手机号码'
+        assert new_find_element(self.driver, my_account.phoneErrors).text == 'Please enter the correct mobile number'
 
-    def test_048_TUMIUAT_1586(self):
+    def test_048_TUMIUAT_1612(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_address_book_btn()
@@ -217,41 +219,12 @@ class MyAccount(unittest.TestCase):
         my_account1.click_address_region()
         my_account1.click_address_beijing()
         my_account1.click_address_qu()
+        my_account1.click_address_qu1()
         my_account1.input_address_Detailed()
         my_account1.click_default_address()
         my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
+        assert new_find_element(self.driver, my_account.creat_new_address).text == 'Add Shipping Address'
         my_account1.click_address_del()
-
-    def test_049_TUMIUAT_1613(self):
-        my_account1 = my_account(self.driver)
-        my_account1.go_to_my_account()
-        my_account1.click_address_book_btn()
-        my_account1.click_creat_new_address()
-        my_account1.input_address_consignee()
-        my_account1.input_address_phone()
-        my_account1.input_addressEditTelphone()
-        my_account1.click_address_region()
-        my_account1.click_address_beijing()
-        my_account1.click_address_qu()
-        my_account1.input_address_Detailed()
-        my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.areaPhone_errors).text == '请输入完整的固定电话号码'
-
-    def test_050_TUMIUAT_1588(self):
-        my_account1 = my_account(self.driver)
-        my_account1.go_to_my_account()
-        my_account1.click_address_book_btn()
-        my_account1.click_creat_new_address()
-        my_account1.input_address_consignee()
-        my_account1.input_address_phone()
-        my_account1.input_addressEditAreaCode()
-        my_account1.click_address_region()
-        my_account1.click_address_beijing()
-        my_account1.click_address_qu()
-        my_account1.input_address_Detailed()
-        my_account1.click_address_save()
-        assert new_find_element(self.driver, my_account.areaPhone_errors).text == '请输入完整的固定电话号码'
 
 
     def test_051_TUMIUAT_574(self):
