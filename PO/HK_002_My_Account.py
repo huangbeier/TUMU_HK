@@ -8,19 +8,20 @@ from HK_001_homepage import homepage
 class my_account(page):
 
     #查看个人信息
-    view_my_info=('xpath',"//body/div[2]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/ul[1]/li[1]/a[1]")
+    view_my_info=('xpath',"//body/div[2]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/ul[2]/li[1]/a[1]")
+
     #查看我的账号
     view_my_account=('xpath','//header/div[3]/div[3]/div[3]/a[1]')
     #更新个人信息
-    update_my_info=('xpath',"//a[contains(text(),'更新个人信息')]")
+    update_my_info=('xpath',"//a[contains(text(),'Update personal information')]")
     #地址簿
-    my_address=('xpath',"//a[contains(text(),'我的地址簿')]")
+    my_address=('xpath',"//a[contains(text(),'My address book')]")
     #更新密码
-    update_my_password=('xpath',"//a[contains(text(),'更新密码')]")
+    update_my_password=('xpath',"//a[contains(text(),'Update Password')]")
     #附近门店
     nearby_stores=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/a[1]')
     #返回门店搜索
-    store_search=('xpath',"//a[contains(text(),'< 返回门店搜索')]")
+    store_search=('xpath',"//a[contains(text(),'< Back To Search')]")
     #个性化输入框
     diy_Input=('id','monogram.initials')
     #个性化按钮
@@ -98,10 +99,10 @@ class my_account(page):
     #修改密码-确认密码报错
     checkNewPassword_errors=('id','checkNewPassword.errors')
 
-    my_account_title = ('xpath', "//h2[contains(text(),'个人信息')]")
+    my_account_title = ('xpath', "//h2[contains(text(),'My Account')]")
     store_name = ('xpath', "//body/div[1]/main[1]/div[1]/div[2]/div[3]/div[1]/h2[1]")
-    store_type = ('xpath', "//div[contains(text(),'门店类型')]")
-    diy_title = ('xpath', "//p[contains(text(),'点击下方输入框激活个性化定制，激活后在输入框内输入您想要定制的字母')]")
+    store_type = ('xpath', "//div[contains(text(),'Store Type')]")
+    diy_title = ('xpath', "//p[contains(text(),'Click on each slots to enter an alphabet, number o')]")
 
 
 
@@ -110,8 +111,8 @@ class my_account(page):
     def go_to_my_info(self):
         self.click(homepage.login_register_btn)
         time.sleep(1)
-        self.input_text(homepage.phone, text='17316565325')
-        self.input_text(homepage.password, text='gxjy541')
+        self.input_text(homepage.phone, text='90000001')
+        self.input_text(homepage.password, text='1111qqqq')
         self.click(homepage.login_btn)
         time.sleep(1)
         self.click(self.view_my_info)

@@ -29,49 +29,49 @@ class MyAccount(unittest.TestCase):
         time.sleep(2)
         my_account1.move_to_logo()
         my_account1.click_account_logo()
-        if new_find_element(self.driver,homepage.my_username).text != '登录/注册':
+        if new_find_element(self.driver,homepage.my_username).text != 'Login / Register':
             homepage1.sign_out()
 
-    def test_032_TUMIUAT_564(self):
+    def test_032_TUMIUAT_821(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_info()
-        assert new_find_element(self.driver,my_account.my_account_title).text == '个人信息'
+        assert new_find_element(self.driver,my_account.my_account_title).text == 'MY ACCOUNT'
 
-    def test_033_TUMIUAT_565(self):
+    def test_033_TUMIUAT_822(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
-        assert new_find_element(self.driver,my_account.update_my_info).text == '更新个人信息'
-        assert new_find_element(self.driver,my_account.update_my_password).text == '更新密码'
-        assert new_find_element(self.driver,my_account.my_address).text == '我的地址簿'
+        assert new_find_element(self.driver,my_account.update_my_info).text == 'UPDATE PERSONAL INFORMATION'
+        assert new_find_element(self.driver,my_account.update_my_password).text == 'UPDATE PASSWORD'
+        assert new_find_element(self.driver,my_account.my_address).text == 'MY ADDRESS BOOK'
 
-    def test_034_TUMIUAT_1529_1(self):
+    def test_034_TUMIUAT_1530_1(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         time.sleep(6)
         b=new_find_element(self.driver,my_account.nearby_stores).text
         my_account1.click_nearby_stores()
         a = new_find_element(self.driver,my_account.store_name).text
-        assert b == a
+        assert b.upper() == a
 
-    def test_035_TUMIUAT_1529_2(self):
+    def test_035_TUMIUAT_1530_2(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         time.sleep(6)
         my_account1.click_nearby_stores()
         my_account1.click_store_search()
-        assert new_find_element(self.driver,my_account.store_type).text == '门店类型'
+        assert new_find_element(self.driver,my_account.store_type).text == 'Store Type'
 
-    def test_036_TUMIUAT_566(self):
+    def test_036_TUMIUAT_823(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.input_diy()
         time.sleep(1)
         my_account1.click_diy_btn()
         time.sleep(1)
-        assert new_find_element(self.driver, my_account.diy_title).text == '点击下方输入框激活个性化定制，激活后在输入框内输入您想要定制的字母'
+        assert new_find_element(self.driver, my_account.diy_title).text == 'Click on each slots to enter an alphabet, number or select any of the symbols displayed below for monogramming.'
         self.driver.refresh()
 
-    def test_037_TUMIUAT_567(self):
+    def test_037_TUMIUAT_824(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_update_my_info()
@@ -82,9 +82,9 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_password).text == 'Update Password'
 
-    def test_038_TUMIUAT_568(self):
+    def test_038_TUMIUAT_825(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account()
         my_account1.click_update_my_info()
@@ -94,7 +94,7 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver,my_account.userName_errors).text== '请输入用户名'
+        assert new_find_element(self.driver,my_account.userName_errors).text== 'Please enter a username.'
 
     def test_039_TUMIUAT_1578(self):
         my_account1 = my_account(self.driver)
