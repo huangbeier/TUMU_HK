@@ -89,8 +89,8 @@ class homepage(page):
     def login(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone,text='90000001')
-        self.input_text(self.password,text='1111qqqq')
+        self.input_text(self.phone,text='67969782')
+        self.input_text(self.password,text='Tumi_2019')
         self.click(self.login_btn)
         time.sleep(1.5)
         self.click(self.close_login)
@@ -99,7 +99,7 @@ class homepage(page):
     def login2(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone, text='90000001')
+        self.input_text(self.phone, text='67969782')
         self.input_text(self.password, text='1qaz2wsx')
         self.click(self.login_btn)
         time.sleep(1.5)
@@ -116,7 +116,7 @@ class homepage(page):
     def login_no_phone(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.password,text='1111qqqq')
+        self.input_text(self.password,text='Tumi_2019')
         self.click(self.login_btn)
         time.sleep(1)
 
@@ -124,21 +124,21 @@ class homepage(page):
         self.click(self.login_register_btn)
         time.sleep(1)
         self.input_text(self.phone, text='90000111')
-        self.input_text(self.password,text='1111qqqq')
+        self.input_text(self.password,text='Tumi_2019')
         self.click(self.login_btn)
         time.sleep(1)
 
     def login_no_password(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone, text='17316565325')
+        self.input_text(self.phone, text='67969782')
         self.click(self.login_btn)
         time.sleep(1)
 
     def login_password_error(self):
         self.click(self.login_register_btn)
         time.sleep(1)
-        self.input_text(self.phone, text='90000001')
+        self.input_text(self.phone, text='67969782')
         self.input_text(self.password,text='gxjy5411')
         self.click(self.login_btn)
         time.sleep(1)
