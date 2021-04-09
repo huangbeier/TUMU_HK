@@ -177,105 +177,105 @@ class Product_list(unittest.TestCase):
         product_list1.click_s_luggage_buy()
         assert len(self.driver.find_elements_by_xpath('//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]')) == 1
 
-    def test_078_TUMIUAT_462_1(self):
-        product_list1 = product_list(self.driver)
-        product_list1.action_f_luggage()
-        time.sleep(1)
-        product_list1.click_f_luggage_all()
-        time.sleep(5)
-        assert new_find_element(self.driver,product_list.page_num).text == '30 件'
-
-    def test_079_TUMIUAT_462_2(self):
-        product_list1 = product_list(self.driver)
-        product_list1.action_f_luggage()
-        time.sleep(1)
-        product_list1.click_f_luggage_all()
-        time.sleep(5)
-        product_list1.click_page_num()
-        product_list1.click_page_60()
-        time.sleep(2)
-        a=self.driver.find_elements_by_link_text('快速购买')
-        assert len(a) == 60
-
-    def test_080_TUMIUAT_462_3(self):
-        product_list1 = product_list(self.driver)
-        product_list1.action_f_luggage()
-        time.sleep(1)
-        product_list1.click_f_luggage_all()
-        time.sleep(5)
-        product_list1.click_page_num()
-        product_list1.click_page_all()
-        b = new_find_element(self.driver,product_list.mergaNum).text
-        time.sleep(2)
-        a = self.driver.find_elements_by_link_text('快速购买')
-        assert len(a) == int(b)
-
-    def test_081_TUMIUAT_463(self):
-        product_list1 = product_list(self.driver)
-        product_list1.click_f_luggage()
-        product_list1.click_s_luggage_buy()
-        a=new_find_element(self.driver,product_list.product_name).text
-        product_list1.click_buy_now()
-        time.sleep(3)
-        assert a == new_find_element(self.driver,product_list.b_product_name).text
-
-    def test_082_TUMIUAT_471(self):
-        product_list1 = product_list(self.driver)
-        product_list1.click_f_luggage()
-        product_list1.click_s_luggage_buy()
-        product_list1.click_f_compare()
-        product_list1.click_s_compare()
-        product_list1.click_immediately_to_compare()
-        assert new_find_element(self.driver,product_list.continue_shopping).text == '继续购物'
-        assert new_find_element(self.driver,product_list.mailToLink).text == '邮件结果'
-        assert new_find_element(self.driver,product_list.res).text == '打印结果'
-        # product_list1.click_del_product()
-        # product_list1.click_f_compare()
-
-
-    def test_083_TUMIUAT_472(self):
-        product_list1 = product_list(self.driver)
-        product_list1.click_f_luggage()
-        product_list1.click_s_luggage_buy()
-        # product_list1.click_f_compare()
-        # time.sleep(3)
-        # product_list1.click_s_compare()
-        product_list1.click_immediately_to_compare()
-        product_list1.click_continue_shopping()
-        assert self.driver.current_url == hk_url
-
-    def test_084_TUMIUAT_474(self):
-        product_list1 = product_list(self.driver)
-        product_list1.click_f_luggage()
-        product_list1.click_s_luggage_buy()
-        product_list1.click_immediately_to_compare()
-        product_list1.click_add_to_Cart()
-        time.sleep(2)
-        assert new_find_element(self.driver,product_list.gotocart).text == '前往购物车'
-        self.driver.refresh()
-
-    def test_085_TUMIUAT_1355_1(self):
-        product_list1 = product_list(self.driver)
-        product_list1.click_f_luggage()
-        product_list1.click_s_luggage_buy()
-        product_list1.click_immediately_to_compare()
-        a=new_find_element(self.driver,product_list.f_product_name).text
-        product_list1.click_cart_content()
-        product_list1.click_gotocart()
-        print(new_find_element(self.driver,product_list.c_f_product_name).text)
-        assert a == new_find_element(self.driver,product_list.c_f_product_name).text
-
-    def test_086_TUMIUAT_1355_2(self):
-        product_list1 = product_list(self.driver)
-        product_list1.click_f_luggage()
-        product_list1.click_s_luggage_buy()
-        product_list1.click_immediately_to_compare()
-        a=new_find_element(self.driver,product_list.f_product_name).text
-        product_list1.click_cart_content()
-        time.sleep(3)
-        product_list1.click_gotocart()
-        b=self.driver.find_elements_by_link_text(a)
-        assert len(b) == 1
+    # def test_078_TUMIUAT_462_1(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.action_f_luggage()
+    #     time.sleep(1)
+    #     product_list1.click_f_luggage_all()
+    #     time.sleep(5)
+    #     assert new_find_element(self.driver,product_list.page_num).text == '30 件'
+    #
+    # def test_079_TUMIUAT_462_2(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.action_f_luggage()
+    #     time.sleep(1)
+    #     product_list1.click_f_luggage_all()
+    #     time.sleep(5)
+    #     product_list1.click_page_num()
+    #     product_list1.click_page_60()
+    #     time.sleep(2)
+    #     a=self.driver.find_elements_by_link_text('快速购买')
+    #     assert len(a) == 60
+    #
+    # def test_080_TUMIUAT_462_3(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.action_f_luggage()
+    #     time.sleep(1)
+    #     product_list1.click_f_luggage_all()
+    #     time.sleep(5)
+    #     product_list1.click_page_num()
+    #     product_list1.click_page_all()
+    #     b = new_find_element(self.driver,product_list.mergaNum).text
+    #     time.sleep(2)
+    #     a = self.driver.find_elements_by_link_text('快速购买')
+    #     assert len(a) == int(b)
+    #
+    # def test_081_TUMIUAT_463(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.click_f_luggage()
+    #     product_list1.click_s_luggage_buy()
+    #     a=new_find_element(self.driver,product_list.product_name).text
+    #     product_list1.click_buy_now()
+    #     time.sleep(3)
+    #     assert a == new_find_element(self.driver,product_list.b_product_name).text
+    #
+    # def test_082_TUMIUAT_471(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.click_f_luggage()
+    #     product_list1.click_s_luggage_buy()
+    #     product_list1.click_f_compare()
+    #     product_list1.click_s_compare()
+    #     product_list1.click_immediately_to_compare()
+    #     assert new_find_element(self.driver,product_list.continue_shopping).text == '继续购物'
+    #     assert new_find_element(self.driver,product_list.mailToLink).text == '邮件结果'
+    #     assert new_find_element(self.driver,product_list.res).text == '打印结果'
+    #     # product_list1.click_del_product()
+    #     # product_list1.click_f_compare()
+    #
+    #
+    # def test_083_TUMIUAT_472(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.click_f_luggage()
+    #     product_list1.click_s_luggage_buy()
+    #     # product_list1.click_f_compare()
+    #     # time.sleep(3)
+    #     # product_list1.click_s_compare()
+    #     product_list1.click_immediately_to_compare()
+    #     product_list1.click_continue_shopping()
+    #     assert self.driver.current_url == hk_url
+    #
+    # def test_084_TUMIUAT_474(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.click_f_luggage()
+    #     product_list1.click_s_luggage_buy()
+    #     product_list1.click_immediately_to_compare()
+    #     product_list1.click_add_to_Cart()
+    #     time.sleep(2)
+    #     assert new_find_element(self.driver,product_list.gotocart).text == '前往购物车'
+    #     self.driver.refresh()
+    #
+    # def test_085_TUMIUAT_1355_1(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.click_f_luggage()
+    #     product_list1.click_s_luggage_buy()
+    #     product_list1.click_immediately_to_compare()
+    #     a=new_find_element(self.driver,product_list.f_product_name).text
+    #     product_list1.click_cart_content()
+    #     product_list1.click_gotocart()
+    #     print(new_find_element(self.driver,product_list.c_f_product_name).text)
+    #     assert a == new_find_element(self.driver,product_list.c_f_product_name).text
+    #
+    # def test_086_TUMIUAT_1355_2(self):
+    #     product_list1 = product_list(self.driver)
+    #     product_list1.click_f_luggage()
+    #     product_list1.click_s_luggage_buy()
+    #     product_list1.click_immediately_to_compare()
+    #     a=new_find_element(self.driver,product_list.f_product_name).text
+    #     product_list1.click_cart_content()
+    #     time.sleep(3)
+    #     product_list1.click_gotocart()
+    #     b=self.driver.find_elements_by_link_text(a)
+    #     assert len(b) == 1
 
 
 
