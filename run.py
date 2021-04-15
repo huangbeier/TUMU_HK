@@ -7,12 +7,12 @@ from utils.ClassicHTMLTestRunner import HTMLTestRunner
 testcase = unittest.defaultTestLoader.discover('case','test_*.py')
 
 #自动运行case并生成报告 htmltestrunner
-filePath = r'F:\Tuogo_Project\TUMI\report\report.html'
+filePath = r'C:\huang111\TUMU_HK\report\report.html'
 #D:\huang_Project\TUMI\report\report.html
 #F:\Tuogo_Project\TUMI\report\report.html  家里
 #C:\huang111\TUMI\report\report.html   公司
-title = 'TUMI'
-descr = 'TUMI'
+title = 'TUMI-HK'
+descr = 'TUMI-HK'
 
 with open(filePath,'wb') as f:
     runner =HTMLTestRunner(stream=f,title=title,description=descr)

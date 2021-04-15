@@ -160,6 +160,7 @@ class product_list(page):
         self.click(self.f_recommended)
 
     def click_s_luggage_buy(self):
+        self.roll_to_element(500)
         self.click(self.s_luggage_buy)
         time.sleep(5)
 
